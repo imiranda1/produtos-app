@@ -1,0 +1,17 @@
+
+<div>
+  <table>
+    <thead>
+      <td>Preço</td>
+      <td>Descrição</td>
+      <td>Título</td>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of listaProdutos">
+        <td>{{p.price}}</td>
+        <td>{{p.description}}</td>
+        <td>{{p.title}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

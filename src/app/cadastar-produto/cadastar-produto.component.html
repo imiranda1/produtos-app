@@ -1,0 +1,13 @@
+<div>
+  <label>Título
+      <input [(ngModel)]="produto.title" placeholger="Título">
+  </label>
+  <label>Preço
+    <input [(ngModel)]="produto.price" placeholger="Preço">
+</label>
+<label>Descrição
+  <textarea [(ngModel)]="produto.description" placeholger="Título"></textarea>
+
+</label>
+<button (click)="cadastrar()"> Cadastrar</button>
+</div>
