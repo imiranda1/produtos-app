@@ -1,17 +1,50 @@
-
-<div>
-  <table>
+<div class="columns my-5 is-centered" >
+  <div class="column is-6">
+  <h1>  LISTA DE PRODUTOS </h1>
+  <table class="table is-bordered is-hoverable is-fullwidth">
     <thead>
-      <td>Preço</td>
-      <td>Descrição</td>
-      <td>Título</td>
+      <tr>
+        <th>Preço</th>
+        <th>Título</th>
+        <th>Descrição</th>
+        <th>
+
+
+          <a routerLink="/produtos/cadastrar">
+            <button class="button is-primary is-rounded">Cadastrar Produto</button>
+          </a>
+
+
+        </th>
+      </tr>
+
     </thead>
     <tbody>
       <tr *ngFor="let p of listaProdutos">
         <td>{{p.price}}</td>
-        <td>{{p.description}}</td>
         <td>{{p.title}}</td>
-      </tr>
+        <td>{{p.description}}</td>
+        <!-- <td>{{p._id}}</td> -->
+        <td>
+          <!-- <a routerLink="/alunos/editar/{{aluno.id}}"> -->
+            <a routerLink="/produtos/editar/{{p._id}}">
+            <button class="button is-link is-rounded">Editar</button>
+          </a>
+
+          <a routerLink="/produtos/excluir/{{p._id}}">
+            <button class="button is-danger is-rounded">Excluir</button>
+          </a>
+
+        </td>
+    </tr>
+
     </tbody>
   </table>
+</div>
+
+<!-- <div class="coluna-50 linha-veritcal">
+  <ng-container *ngIf="perfilAlunoSelecionado">
+  <app-aluno [alunoVizualizar] = "perfilAlunoSelecionado"></app-aluno>
+</ng-container>
+</div> -->
 </div>

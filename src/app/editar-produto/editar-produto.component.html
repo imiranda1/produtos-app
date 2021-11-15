@@ -1,25 +1,27 @@
 
 <div class="columns my-5 is-centered" >
   <div class="column is-6">
+
     <div class="field">
       <label>Título
-        <input [(ngModel)]="produto.title" placeholger="Título">
+        <input [(ngModel)]="produtoEditar.title" placeholger="Título">
       </label>
 
     </div>
 
     <div class="field">
       <label>Preço
-        <input [(ngModel)]="produto.price" placeholger="Preço">
+        <input [(ngModel)]="produtoEditar.price" placeholger="Preço">
       </label>
     </div>
     <div class="field">
       <label>Descrição
-        <textarea [(ngModel)]="produto.description" placeholger="Título"></textarea>
+        <textarea [(ngModel)]="produtoEditar.description" placeholger="Descrição"></textarea>
 
       </label>
     </div>
-    <button (click)="cadastrar()"> Cadastrar</button>
+    <button (click)="salvarProduto()"> Salvar</button>
+
   </div>
 </div>
 

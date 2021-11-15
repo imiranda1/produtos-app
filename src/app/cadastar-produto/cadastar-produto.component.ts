@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { WebService } from '../web.service';
 
 @Component({
@@ -10,16 +11,20 @@ export class CadastarProdutoComponent implements OnInit {
 
   produto = {title:"", price: 0.0, description: ""}
 
-  constructor(private web : WebService) { }
+  constructor(private web : WebService,
+    private rota: ActivatedRoute,
+    private router: Router) { }
 
   cadastrar(){
     this.web.cadastrarProduto(this.produto).subscribe(res =>{
       console.log(res);
       if(res.ok == true){
-        alert("Cadastro realizado com sucesso");
+        alert("Cadastro realizado com Sucesso");
+        this.router.navigate(['/produtos']);
+
       }
       else{
-        alert("Erro ao realizar foi realisado");
+        alert("Erro ao cadastrar produto ");
       }
     });
 
