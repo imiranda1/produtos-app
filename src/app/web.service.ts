@@ -8,7 +8,7 @@ import { Observable } from "rxjs";
 })
 export class WebService {
 
-  baseURL = "https://banco-dados-teste.glitch.me/api";
+  baseURL = "https://produtos-icaro.glitch.me/api";
   constructor(private http : HttpClient) { }
 
   getProdutos() : Observable<Produto[]>{
